@@ -18,8 +18,8 @@
 | Savannah Tanner | 15 | 145 | 9.7
 | Adrien Protzel | 3 | 70 | 50
 | Chris Somnitz | 7 | 108 | 15.43
-| Kyle Noble | 4 | 219 | 54.75
-| **Totals** | **25** | **778** | **31.1**
+| Kyle Noble | 6 | 242 | 40.33
+| **Totals** | **37** | **979** | **26.46**
 
 ## Merge Conflicts Resolved
 | Name | # MCs Resolved | Merged Branch
@@ -46,4 +46,4 @@
 | Savannah Tanner | 1 | `feature-Action-Dialog`
 | Adrien Protzel | 1 | `7af9b11`
 | Chris Somnitz | 0 | `feature/new-feature`
-| Kyle Noble | 0 | `feature/new-feature`
+| Kyle Noble | 1 | `feature/global-css-classes`
