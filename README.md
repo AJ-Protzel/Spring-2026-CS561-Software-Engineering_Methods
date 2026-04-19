@@ -26,7 +26,7 @@
 | --------- | ----------- | ---------------
 | Alex Bruzda | 1 | `feature/menu-logic`
 | Savannah Tanner | 2 | `feature/css-classes-for-mode-pages`, `feature/document-events`
-| Adrien Protzel | 3 | `feature/new-feature`
+| Adrien Protzel | 3 | `feature-action-dialog`
 | Chris Somnitz | 1 | `feature/sidemenu-style`
 | Kyle Noble | 1 | `feature/mode-tabs-style`
 
@@ -35,7 +35,7 @@
 | --------- | ----------- | ---------------
 | Alex Bruzda | 1 | `feature/menu-logic`
 | Savannah Tanner | 1 | `feature/document-events`
-| Adrien Protzel | 0 | `feature/new-feature`
+| Adrien Protzel | 1 | `feature-action-dialog`
 | Chris Somnitz | 1 | `feature/sidemenu-li-style`
 | Kyle Noble | 1 | `feature/mode-tabs-content`
 
@@ -44,6 +44,6 @@
 | --------- | ----------- | ---------------
 | Alex Bruzda | 1 | `feature/mode-tabs-script`
 | Savannah Tanner | 1 | `feature-Action-Dialog`
-| Adrien Protzel | 0 | `feature/new-feature`
+| Adrien Protzel | 1 | `7af9b11`
 | Chris Somnitz | 0 | `feature/new-feature`
 | Kyle Noble | 0 | `feature/new-feature`
