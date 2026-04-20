@@ -65,5 +65,10 @@ function keyDownModeTabFocused(key) {
             GlobalModeTabButtons.length) % GlobalModeTabButtons.length); 
         GlobalModeTabButtons[GlobalFocusedMode.get()].setAttribute("tabindex","0");
         GlobalModeTabButtons[GlobalFocusedMode.get()].focus(); 
+    } else if (key =="Home") { //shift focus to first mode tab
+        GlobalModeTabButtons[GlobalFocusedMode.get()].setAttribute("tabindex","-1");
+        GlobalFocusedMode.set(0); 
+        GlobalModeTabButtons[GlobalFocusedMode.get()].setAttribute("tabindex","0");
+        GlobalModeTabButtons[GlobalFocusedMode.get()].focus(); 
     }
 }
