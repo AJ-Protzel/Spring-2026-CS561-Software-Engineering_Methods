@@ -18,7 +18,7 @@
 | Savannah Tanner | 15 | 145 | 9.7
 | Adrien Protzel | 5 | 117 | 16.71
 | Chris Somnitz | 14 | 139 | 9.93
-| Kyle Noble | 6 | 242 | 40.33
+| Kyle Noble | 14 | 294 | 21
 | **Totals** | **41** | **1013** | **24.71**
 
 ## Merge Conflicts Resolved
@@ -37,7 +37,7 @@
 | Savannah Tanner | 1 | `feature/document-events`
 | Adrien Protzel | 1 | `feature-action-dialog`
 | Chris Somnitz | 1 | `feature/sidemenu-li-style`
-| Kyle Noble | 1 | `feature/mode-tabs-content`
+| Kyle Noble | 2 | `mode-tabs-keydown`, `feature/mode-tabs-content`
 
 ## Cherry Picks
 | Name | # Cherry Picks | From Branch
