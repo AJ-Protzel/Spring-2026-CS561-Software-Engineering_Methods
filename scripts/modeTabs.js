@@ -1,3 +1,16 @@
+/*************************************************************************
+ * @function switchMode 
+ * @desc 
+ * Switch from the current mode to a new mode. Unhighlight previous
+ * mode tab button, highlight new mode tab button, hide previous mode
+ * tab panel, show new mode tab panel, and update mode variables.
+ * @param newMode, an integer index (into modeTabButtons and 
+ *        modeTabPanels) corresponding to the new mode
+ * @global modeTabButtons (array of HTML tab button elements) 
+ * @global modeTabPanels (array of HTML tab panel elements)
+ * @global currentMode (index of current mode)
+ * @global focusedMode (index of mode with current focus)
+ *************************************************************************/
  function switchMode(newMode) {
     //Switch mode button
     GlobalModeTabButtons[GlobalCurrentMode.get()].classList.remove("modetab-selected");
