@@ -54,5 +54,10 @@ function keyDownModeTabFocused(key) {
     if (key =="Enter" || key =="Space") {
       //Switch to mode corresponding to tab with current focus
       switchMode(GlobalFocusedMode.get()); 
-    }  
+    } else if (key =="ArrowRight") { //shift focus to next mode tab
+        GlobalModeTabButtons[GlobalFocusedMode.get()].setAttribute("tabindex","-1");
+        GlobalFocusedMode.set((GlobalFocusedMode.get() + 1) % GlobalModeTabButtons.length); 
+        GlobalModeTabButtons[GlobalFocusedMode.get()].setAttribute("tabindex","0");
+        GlobalModeTabButtons[GlobalFocusedMode.get()].focus();  
+    }
 }
