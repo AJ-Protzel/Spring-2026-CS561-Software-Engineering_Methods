@@ -42,3 +42,7 @@
             JSON.stringify(historyObj));
     }
 }
+
+for (let i = 0; i < GlobalModeTabButtons.length; ++i) {
+    GlobalModeTabButtons[i].addEventListener("click",() => switchMode(i));
+}
