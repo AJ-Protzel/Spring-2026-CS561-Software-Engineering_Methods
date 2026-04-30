@@ -6,11 +6,11 @@
 ## Inspection Summary
 |  |  |
 |-------|-------|
-| **Inspector Name:** | [Name] |
-| **Time Started:** | [Time] |
-| **Time Ended:** | [Time] |
-| **Minutes Spent:** | [Time] |
-| **Defects Found:** | [Number] major, [Number] minor|
+| **Inspector Name:** | Chris Somnitz |
+| **Time Started:** | Did not track |
+| **Time Ended:** | Did not track |
+| **Minutes Spent:** | Spread over 2 days |
+| **Defects Found:** | 1 major, 12 minor|
 
 ## Defects
 
@@ -26,14 +26,16 @@
 
 | # | CB # | Line # | Type | Severity | Description |
 |---|------|--------|------|----------|---------------|
-| 1 |      |        |      |          |               |
-| 2 |      |        |      |          |               |
-| 3 |      |        |      |          |               |
-| 4 |      |        |      |          |               |
-| 5 |      |        |      |          |               |
-| 6 |      |        |      |          |               |
-| 7 |      |        |      |          |               |
-| 8 |      |        |      |          |               |
-| 9 |      |        |      |          |               |
-| 10 |     |        |      |          |               |
-| *n*|     |        |      |          |               |
+| 1 |   All| N/A | Str | Minor |The indentation is 4 spaces rather than the 2 spaces specified in Google's Javascript style guide.|
+| 2 |   All| N/A | Str | Minor |Numerous string constants are used rather than symbolics.|
+| 3 |   All| N/A | Doc | Major |No comments or documentation whatsoever.|
+| 4 |     1| 21 | Str | Minor |Line is over the 80 character limit set by the style guide. This would remain the case even if the indentation were 2 spaces rather than 4.|
+| 5 |     1| 32 | Str | Minor |Line is over 80 characters.|
+| 6 |     2| 12 | Str | Minor |Line is over 80 characters.|
+| 7 |     2| 24 | Var | Minor |Variable name "li" is unclear in meaning.|
+| 8 |     3| 6 | Str | Minor |Line is FAR over 80 characters.|
+| 9 |     3| 12 | Str | Minor |Line is over 80 characters.|
+| 10 |    3| 18 | Str | Minor |Line is over 80 characters.|
+| 11 |    3| 22 | Str | Minor |Line is over 80 characters.|
+| 12 |    4| 11 | Str | Minor |Line is over 80 characters.|
+| 13 |    4| 25 | Str | Minor |displayData's paramater "data" is not typed with JSDoc annotation as required by the style guide.|
