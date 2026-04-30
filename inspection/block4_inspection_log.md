@@ -15,7 +15,7 @@
 | **Time Started:** | 8:50 |
 | **Time Finished:** | 9:01 |
 | **Minutes Spent:** | 11 |
-| **Defects Found:** | [6] major, [4] minor|
+| **Defects Found:** | 6 major, 4 minor|
 
 ## Defects
 
