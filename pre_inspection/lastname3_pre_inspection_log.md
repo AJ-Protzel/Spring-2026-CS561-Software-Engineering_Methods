@@ -6,7 +6,7 @@
 ## Inspection Summary
 |  |  |
 |-------|-------|
-| **Inspector Name:** | [Name] |
+| **Inspector Name:** | [Adrien Protzel] |
 | **Time Started:** | [Time] |
 | **Time Ended:** | [Time] |
 | **Minutes Spent:** | [Time] |

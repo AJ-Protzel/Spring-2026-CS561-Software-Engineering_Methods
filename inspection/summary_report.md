@@ -8,11 +8,11 @@ Meeting date: [Date]
 
 | Code Block | Author | Moderator | Recorder | Reader | Inspector |
 |------|------|------|------|------|------|
-| 1 | Member1 | Member2 | Member3 | Member4 | Member5 |
-| 2 | Member5| Member1 | Member2 | Member3 | Member4 | 
-| 3 | Member4| Member5 | Member1 | Member2 | Member3 | 
-| 4 | Member3| Member4 | Member5 | Member1 | Member2 |
-| 5 | Member2| Member3 | Member4 | Member5 | Member1 |
+| 1 | Alex | Adrien | Chris | Kyle | Savannah |
+| 2 | Savannah| Alex | Adrien | Chris | Kyle | 
+| 3 | Kyle| Savannah | Alex | Adrien | Chris | 
+| 4 | Chris| Kyle | Savannah | Alex | Adrien |
+| 5 | Adrien| Chris | Kyle | Savannah | Alex |
 
 
 ## Inspection Data
