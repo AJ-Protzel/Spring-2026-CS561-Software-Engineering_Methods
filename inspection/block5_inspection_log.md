@@ -5,17 +5,17 @@
 *Rotate roles for each code block, so that each participant has a chance to play each role.*
 | Author | Moderator | Recorder | Reader | Inspector |
 |--------|-----------|----------|--------|-----------|
-| Member1 | Member2 | Member3 | Member4 | Member5 |
+| Savannah | Adrien  | Kyle     | Chris  | Alex      |
 
 ## Inspection Summary
 |  |  |
 |-------|-------|
-| **Code Block #**: | [Number] |
-| **Meeting Date:** | [Date] |
-| **Time Started:** | [Time] |
-| **Time Finished:** | [Time] |
-| **Minutes Spent:** | [Time] |
-| **Defects Found:** | [Number] major, [Number] minor|
+| **Code Block #**: | 5 |
+| **Meeting Date:** | 4/29/26 |
+| **Time Started:** | 9:01 |
+| **Time Finished:** | 9:10 |
+| **Minutes Spent:** | 0:09 |
+| **Defects Found:** | 1 major, 2 minor|
 
 ## Defects
 
@@ -30,14 +30,6 @@
 
 | # | Line # | Type | Severity | Description   |
 |---|--------|------|----------|---------------|
-| 1 |        |      |          |               |
-| 2 |        |      |          |               |
-| 3 |        |      |          |               |
-| 4 |        |      |          |               |
-| 5 |        |      |          |               |
-| 6 |        |      |          |               |
-| 7 |        |      |          |               |
-| 8 |        |      |          |               |
-| 9 |        |      |          |               |
-| 10 |       |      |          |               |
-| *n*|       |      |          |               |
+| 1 |  13-15 | Oth  | Major    | Images were not included. |
+| 2 |  3-33  | Str  | Minor    | head and body blocks not indented  |
+| 3 |  27    | Doc  | Minor    | showNextImage function missing documentation |
