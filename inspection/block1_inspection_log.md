@@ -5,17 +5,17 @@
 *Rotate roles for each code block, so that each participant has a chance to play each role.*
 | Author | Moderator | Recorder | Reader | Inspector |
 |--------|-----------|----------|--------|-----------|
-| Member1 | Member2 | Member3 | Member4 | Member5 |
+| Kyle | Alex | Chris | Adrien | Savannah |
 
 ## Inspection Summary
 |  |  |
 |-------|-------|
-| **Code Block #**: | [Number] |
-| **Meeting Date:** | [Date] |
-| **Time Started:** | [Time] |
-| **Time Finished:** | [Time] |
-| **Minutes Spent:** | [Time] |
-| **Defects Found:** | [Number] major, [Number] minor|
+| **Code Block #**: | 1 |
+| **Meeting Date:** | 4-29-2026 |
+| **Time Started:** | 8:16pm |
+| **Time Finished:** | 8:27pm |
+| **Minutes Spent:** | 11 |
+| **Defects Found:** | 0 major, 4 minor|
 
 ## Defects
 
@@ -30,14 +30,7 @@
 
 | # | Line # | Type | Severity | Description   |
 |---|--------|------|----------|---------------|
-| 1 |        |      |          |               |
-| 2 |        |      |          |               |
-| 3 |        |      |          |               |
-| 4 |        |      |          |               |
-| 5 |        |      |          |               |
-| 6 |        |      |          |               |
-| 7 |        |      |          |               |
-| 8 |        |      |          |               |
-| 9 |        |      |          |               |
-| 10 |       |      |          |               |
-| *n*|       |      |          |               |
+| 1 |      15|   Def|     Minor|Email input field uses text input type instead of email input type.|
+| 2 |       3|   Str|     Minor|Head tag should be indented.|
+| 3 |       9|   Str|     Minor|Body tag should be indented.|
+| 4 |      26|   Doc|     Minor|Function should have a comment.|

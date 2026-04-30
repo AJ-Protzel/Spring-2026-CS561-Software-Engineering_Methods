@@ -1,6 +1,6 @@
 # Lab 5a Inspection Summary Report
 
-Meeting date: [Date]
+Meeting date: 4-29-2026
 
 
 ## Inspection Participants
@@ -8,11 +8,11 @@ Meeting date: [Date]
 
 | Code Block | Author | Moderator | Recorder | Reader | Inspector |
 |------|------|------|------|------|------|
-| 1 | Alex | Adrien | Chris | Kyle | Savannah |
-| 2 | Savannah| Alex | Adrien | Chris | Kyle | 
-| 3 | Kyle| Savannah | Alex | Adrien | Chris | 
-| 4 | Chris| Kyle | Savannah | Alex | Adrien |
-| 5 | Adrien| Chris | Kyle | Savannah | Alex |
+| 1 | Kyle | Alex | Chris | Adrien | Savannah |
+| 2 | Chris | Savannah | Adrien | Alex | Kyle | 
+| 3 | Adrien | Kyle | Alex | Savannah | Chris | 
+| 4 | Alex | Chris | Savannah | Kyle | Adrien |
+| 5 | Savannah | Adrien | Kyle | Chris | Alex |
 
 
 ## Inspection Data
