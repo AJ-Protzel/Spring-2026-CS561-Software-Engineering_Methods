@@ -5,17 +5,17 @@
 *Rotate roles for each code block, so that each participant has a chance to play each role.*
 | Author | Moderator | Recorder | Reader | Inspector |
 |--------|-----------|----------|--------|-----------|
-| Member1 | Member2 | Member3 | Member4 | Member5 |
+| Chris  | Kyle      | Savannah | Alex   | Adrien    |
 
 ## Inspection Summary
 |  |  |
 |-------|-------|
-| **Code Block #**: | [Number] |
-| **Meeting Date:** | [Date] |
-| **Time Started:** | [Time] |
-| **Time Finished:** | [Time] |
-| **Minutes Spent:** | [Time] |
-| **Defects Found:** | [Number] major, [Number] minor|
+| **Code Block #**: | 2 |
+| **Meeting Date:** | 4/29/2026 |
+| **Time Started:** | 8:50 |
+| **Time Finished:** | 9:01 |
+| **Minutes Spent:** | 11 |
+| **Defects Found:** | [6] major, [4] minor|
 
 ## Defects
 
@@ -30,12 +30,12 @@
 
 | # | Line # | Type | Severity | Description   |
 |---|--------|------|----------|---------------|
-| 1 |        |      |          |               |
-| 2 |        |      |          |               |
-| 3 |        |      |          |               |
-| 4 |        |      |          |               |
-| 5 |        |      |          |               |
-| 6 |        |      |          |               |
+| 1 |  18    | Def  | major    | doesn't check or confirm API response             |
+| 2 |  28    | Def  | major    | no input validation on response data          |
+| 3 |  15    | Doc  | minor    |  No comments or documentation for function             |
+| 4 |  25    | Doc  | minor    |  No comments or documentation for function             |
+| 5 |  3-5   | Str  | minor    | html block not indented              |
+| 6 |  6-34  | Str  | minor    | body block not indented               |
 | 7 |        |      |          |               |
 | 8 |        |      |          |               |
 | 9 |        |      |          |               |
