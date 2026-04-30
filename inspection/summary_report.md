@@ -19,10 +19,10 @@ Meeting date: 4-29-2026
 
 | Metric | Value |
 |--------|--------|
-| **Lines of code inspected:** | [Number] |
-| **Meeting Duration:** | [Number] minutes |
+| **Lines of code inspected:** | 178 |
+| **Meeting Duration:** | 54 minutes |
 | **Total Preparation Effort¹:** | [Number] minutes |
-| **Estimated Rework Effort²:** | [Number] minutes |
+| **Estimated Rework Effort²:** | 25 minutes |
 
 ¹ Across all team members  
 ² Estimate this value; you do not actually have to rework the code.
@@ -30,8 +30,8 @@ Meeting date: 4-29-2026
 ## Product Appraisal
 | Code Block | Defects Found | Status | 
 |------------|---------------|--------|
-| 1 | [Number] major, [Number] minor | [Accepted As Is],   [Accepted Conditionally Upon Rework],  [Not Accepted],  [Inspection not Completed]|
-| 2 | [Number] major, [Number] minor | [Accepted As Is],   [Accepted Conditionally Upon Rework],  [Not Accepted],  [Inspection not Completed]|
-| 3 | [Number] major, [Number] minor | [Accepted As Is],   [Accepted Conditionally Upon Rework],  [Not Accepted],  [Inspection not Completed]|
-| 4 | [Number] major, [Number] minor | [Accepted As Is],   [Accepted Conditionally Upon Rework],  [Not Accepted],  [Inspection not Completed]|
-| 5 | [Number] major, [Number] minor | [Accepted As Is],   [Accepted Conditionally Upon Rework],  [Not Accepted],  [Inspection not Completed]|  
+| 1 | 0 major, 4 minor | Accepted As Is |
+| 2 | 0 major, 4 minor | Accepted As Is |
+| 3 | 0 major, 4 minor | Accepted As Is |
+| 4 | 2 major, 4 minor | Accepted Conditionally Upon Rework |
+| 5 | 1 major, 2 minor | Accepted Conditionally Upon Rework |  
