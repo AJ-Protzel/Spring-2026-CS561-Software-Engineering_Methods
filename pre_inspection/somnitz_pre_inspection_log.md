@@ -7,9 +7,9 @@
 |  |  |
 |-------|-------|
 | **Inspector Name:** | Chris Somnitz |
-| **Time Started:** | Did not track |
-| **Time Ended:** | Did not track |
-| **Minutes Spent:** | Spread over 2 days |
+| **Time Started:** | 2:17pm |
+| **Time Ended:** | 3:09pm |
+| **Minutes Spent:** | 52 |
 | **Defects Found:** | 1 major, 12 minor|
 
 ## Defects

@@ -21,7 +21,7 @@ Meeting date: 4-29-2026
 |--------|--------|
 | **Lines of code inspected:** | 178 |
 | **Meeting Duration:** | 54 minutes |
-| **Total Preparation Effort¹:** | [Number] minutes |
+| **Total Preparation Effort¹:** | 262 minutes |
 | **Estimated Rework Effort²:** | 25 minutes |
 
 ¹ Across all team members  
