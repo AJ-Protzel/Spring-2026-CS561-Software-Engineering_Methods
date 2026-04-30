@@ -6,7 +6,7 @@
 ## Inspection Summary
 |  |  |
 |-------|-------|
-| **Inspector Name:** | [Name] |
+| **Inspector Name:** | [Savannah Tanner] |
 | **Time Started:** | [Time] |
 | **Time Ended:** | [Time] |
 | **Minutes Spent:** | [Time] |
