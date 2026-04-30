@@ -6,11 +6,11 @@
 ## Inspection Summary
 |  |  |
 |-------|-------|
-| **Inspector Name:** | [Savannah Tanner] |
-| **Time Started:** | [Time] |
-| **Time Ended:** | [Time] |
-| **Minutes Spent:** | [Time] |
-| **Defects Found:** | [Number] major, [Number] minor|
+| **Inspector Name:** | Savannah Tanner |
+| **Time Started:** | 8:41 |
+| **Time Ended:** | 9:22 |
+| **Minutes Spent:** | 41 |
+| **Defects Found:** | 3 major, 7 minor|
 
 ## Defects
 
@@ -26,14 +26,14 @@
 
 | # | CB # | Line # | Type | Severity | Description |
 |---|------|--------|------|----------|---------------|
-| 1 |      |        |      |          |               |
-| 2 |      |        |      |          |               |
-| 3 |      |        |      |          |               |
-| 4 |      |        |      |          |               |
-| 5 |      |        |      |          |               |
-| 6 |      |        |      |          |               |
-| 7 |      |        |      |          |               |
-| 8 |      |        |      |          |               |
-| 9 |      |        |      |          |               |
-| 10 |     |        |      |          |               |
+| 1 |   1   |   15     | Var     | Minor         |  Input type for email should be email, not text             |
+| 2 |   1   |   31     | Def     | Major         | Not validating usernames              |
+| 3 |   1   |   38     | Def     | Major         | Not validating emails              |
+| 4 |   2   |  16      | Doc      | Minor          | No comments or documentation for addItem function               |
+| 5 |   3   |   6     | Str      | Minor          | Line is too long (over 80 characters)|
+| 6 |   4   | 15    | Doc      | Minor         |  No comments or documentation for fetchData function             |
+| 7 |   4   | 25       | Doc     | Minor         | No comments or documentation for displayData function              |
+| 8 |   4   |  23      | Def     | Major         | No validity checking for images              |
+| 9 |   5   |  27      | Doc     | Minor         | No comments or documentation for fetchData function               |
+| 10 |  5   |    6    | Str     | Minor         | Height and width are defined with constants              |
 | *n*|     |        |      |          |               |
