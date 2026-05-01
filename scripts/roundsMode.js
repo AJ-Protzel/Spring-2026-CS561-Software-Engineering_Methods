@@ -13,9 +13,9 @@
  * @global roundMinutes: Form's minutes field
  * @global roundSeconds: Form's seconds field
  *************************************************************************/
- function updateSGS() {
-  GlobalRoundSGS.value = 
-    (GlobalRoundStrokes.valueAsNumber + GlobalRoundMinutes.valueAsNumber) + 
+function updateSGS() {
+  GlobalRoundSGS.value =
+    (GlobalRoundStrokes.valueAsNumber + GlobalRoundMinutes.valueAsNumber) +
     ":" + GlobalRoundSeconds.value
 }
 
@@ -93,15 +93,15 @@ function prepEditRoundForm() {
 * @global GlobalRoundNotes: Form's notes field
 *************************************************************************/
 function fillRoundForm(round) {
-GlobalRoundDate.value = round.date;
-GlobalRoundCourse.value = round.course;
-GlobalRoundType.value = round.type;
-GlobalRoundHoles.value = round.holes;
-GlobalRoundStrokes.value = round.strokes;
-GlobalRoundMinutes.value = round.minutes;
-GlobalRoundSeconds.value = round.seconds;
-GlobalRoundSGS.value = round.SGS;
-GlobalRoundNotes.value = round.notes;
+  GlobalRoundDate.value = round.date;
+  GlobalRoundCourse.value = round.course;
+  GlobalRoundType.value = round.type;
+  GlobalRoundHoles.value = round.holes;
+  GlobalRoundStrokes.value = round.strokes;
+  GlobalRoundMinutes.value = round.minutes;
+  GlobalRoundSeconds.value = round.seconds;
+  GlobalRoundSGS.value = round.SGS;
+  GlobalRoundNotes.value = round.notes;
 }
 
 /*************************************************************************
@@ -125,25 +125,25 @@ GlobalRoundNotes.value = round.notes;
 * @global GlobalRoundNotesErr: Error message for notes field
 *************************************************************************/
 function resetLogRoundForm() {
-//Set date to today.
-GlobalRoundDate.valueAsNumber =
-  Date.now()-(new Date()).getTimezoneOffset()*60000;
-GlobalRoundCourse.value = "";
-GlobalRoundType.value = "practice";
-GlobalRoundHoles.value = "18";
-GlobalRoundStrokes.value = "80";
-GlobalRoundMinutes.value = "60";
-GlobalRoundSeconds.value = "00";
-GlobalRoundSGS.value = "140:00";
-GlobalRoundNotes.value = "";
-GlobalRoundDateErr.classList.add("hidden");
-GlobalRoundCourseErr.classList.add("hidden");
-GlobalRoundStrokesErr.classList.add("hidden");
-GlobalRoundMinutesErr.classList.add("hidden");
-GlobalRoundSecondsErr.classList.add("hidden");
-GlobalRoundNotesErr.classList.add("hidden");
-GlobalRoundErrBox.classList.add("hidden");
-GlobalFirstFocusableLogRoundItem.set(GlobalRoundDate);
+  //Set date to today.
+  GlobalRoundDate.valueAsNumber =
+    Date.now() - (new Date()).getTimezoneOffset() * 60000;
+  GlobalRoundCourse.value = "";
+  GlobalRoundType.value = "practice";
+  GlobalRoundHoles.value = "18";
+  GlobalRoundStrokes.value = "80";
+  GlobalRoundMinutes.value = "60";
+  GlobalRoundSeconds.value = "00";
+  GlobalRoundSGS.value = "140:00";
+  GlobalRoundNotes.value = "";
+  GlobalRoundDateErr.classList.add("hidden");
+  GlobalRoundCourseErr.classList.add("hidden");
+  GlobalRoundStrokesErr.classList.add("hidden");
+  GlobalRoundMinutesErr.classList.add("hidden");
+  GlobalRoundSecondsErr.classList.add("hidden");
+  GlobalRoundNotesErr.classList.add("hidden");
+  GlobalRoundErrBox.classList.add("hidden");
+  GlobalFirstFocusableLogRoundItem.set(GlobalRoundDate);
 }
 
 /*************************************************************************
@@ -153,8 +153,8 @@ GlobalFirstFocusableLogRoundItem.set(GlobalRoundDate);
 * toast notification on the "Rounds" mode page, close it.
 * @global roundLogged: The "Round Logged" toast
 *************************************************************************/
-GlobalRoundUpdatedClose.addEventListener("click",function() {
-GlobalRoundUpdated.classList.add("hidden");
+GlobalRoundUpdatedClose.addEventListener("click", function () {
+  GlobalRoundUpdated.classList.add("hidden");
 });
 
 /*************************************************************************
@@ -168,18 +168,18 @@ GlobalRoundUpdated.classList.add("hidden");
 * @global GlobalUserData: The data for the current user
 *************************************************************************/
 function writeRoundToTable(row, rIndex) {
-row.innerHTML = "<td>" + GlobalUserData.rounds[rIndex].date + "</td><td>" +
-GlobalUserData.rounds[rIndex].course + "</td><td>" + 
-GlobalUserData.rounds[rIndex].SGS + " (" + GlobalUserData.rounds[rIndex].strokes +
-" in " + GlobalUserData.rounds[rIndex].minutes + ":" + 
-GlobalUserData.rounds[rIndex].seconds + 
-")</td>" +
-"<td><button aria-label='View and Edit Round'" + 
-"onclick='editRound(" + GlobalUserData.rounds[rIndex].roundNum + ")'><span class='fas fa-eye'>" +
-"</span>&nbsp;<span class='fas fa-edit'></span></button></td>" +
-"<td><button aria-label='Delete Round'" + 
-"onclick='confirmDelete(" + GlobalUserData.rounds[rIndex].roundNum + ")'>" +
-"<span class='fas fa-trash'></span></button></td>";
+  row.innerHTML = "<td>" + GlobalUserData.rounds[rIndex].date + "</td><td>" +
+    GlobalUserData.rounds[rIndex].course + "</td><td>" +
+    GlobalUserData.rounds[rIndex].SGS + " (" + GlobalUserData.rounds[rIndex].strokes +
+    " in " + GlobalUserData.rounds[rIndex].minutes + ":" +
+    GlobalUserData.rounds[rIndex].seconds +
+    ")</td>" +
+    "<td><button aria-label='View and Edit Round'" +
+    "onclick='editRound(" + GlobalUserData.rounds[rIndex].roundNum + ")'><span class='fas fa-eye'>" +
+    "</span>&nbsp;<span class='fas fa-edit'></span></button></td>" +
+    "<td><button aria-label='Delete Round'" +
+    "onclick='confirmDelete(" + GlobalUserData.rounds[rIndex].roundNum + ")'>" +
+    "<span class='fas fa-trash'></span></button></td>";
 }
 
 /*************************************************************************
@@ -191,17 +191,17 @@ GlobalUserData.rounds[rIndex].seconds +
 * @global GlobalRoundsTableCaption: The table's caption
 *************************************************************************/
 function addRoundToTable(roundIndex) {
-const roundId = GlobalUserData.rounds[roundIndex].roundNum;
-if (GlobalRoundsTable.rows[1].innerHTML.includes ("colspan")) {
-  //empty table! Remove this row before adding new one
-  GlobalRoundsTable.deleteRow(1);
-}
-//Write new row containing new round to table body
-const thisRoundBody = GlobalRoundsTable.querySelector("tbody");
-const thisRound = thisRoundBody.insertRow(0); //insert as first table row
-thisRound.id = "r-" + roundId; //set unique id of  row so we can access it later
-thisRound.classList.add("row-item"); //needed for sorting.
-writeRoundToTable(thisRound,roundIndex);
+  const roundId = GlobalUserData.rounds[roundIndex].roundNum;
+  if (GlobalRoundsTable.rows[1].innerHTML.includes("colspan")) {
+    //empty table! Remove this row before adding new one
+    GlobalRoundsTable.deleteRow(1);
+  }
+  //Write new row containing new round to table body
+  const thisRoundBody = GlobalRoundsTable.querySelector("tbody");
+  const thisRound = thisRoundBody.insertRow(0); //insert as first table row
+  thisRound.id = "r-" + roundId; //set unique id of  row so we can access it later
+  thisRound.classList.add("row-item"); //needed for sorting.
+  writeRoundToTable(thisRound, roundIndex);
 }
 
 /*************************************************************************
@@ -213,8 +213,20 @@ writeRoundToTable(thisRound,roundIndex);
 * @global userData: the current user's data object
 *************************************************************************/
 function updateRoundInTable(rowIndex) {
-const thisRound = document.getElementById("r-" + GlobalUserData.rounds[rowIndex].roundNum);
-writeRoundToTable(thisRound,rowIndex);
+  const thisRound = document.getElementById("r-" + GlobalUserData.rounds[rowIndex].roundNum);
+  writeRoundToTable(thisRound, rowIndex);
+}
+/*************************************************************************
+ * @function deleteRound
+ * @desc
+ * Deletes a round from the "Rounds" table and from local storage
+ * @param roundId -- the unique id of the round to be deleted
+ * @returns -- true if round could be deleted, false otherwise
+ *************************************************************************/
+function deleteRound(roundId) {
+  GlobalUserData.rounds = GlobalUserData.rounds.filter(function (round) {
+    return round.roundNum !== roundId;
+  });
 }
 
 /*************************************************************************
@@ -226,14 +238,14 @@ writeRoundToTable(thisRound,rowIndex);
 * @global GlobalRoundsDataCaption: The caption for the "Rounds" table
 *************************************************************************/
 function populateRoundsTable() {
-for (let i = 0; i < GlobalUserData.rounds.length; ++i) {
-  addRoundToTable(i);
-}
-if (GlobalUserData.rounds.length == 1) {
-  GlobalRoundsTableCaption.textContent = "Table displaying 1 speedgolf round";
-} else {
-  GlobalRoundsTableCaption.textContent = "Table displaying " + GlobalUserData.rounds.length + " speedgolf rounds";
-}
+  for (let i = 0; i < GlobalUserData.rounds.length; ++i) {
+    addRoundToTable(i);
+  }
+  if (GlobalUserData.rounds.length == 1) {
+    GlobalRoundsTableCaption.textContent = "Table displaying 1 speedgolf round";
+  } else {
+    GlobalRoundsTableCaption.textContent = "Table displaying " + GlobalUserData.rounds.length + " speedgolf rounds";
+  }
 }
 
 /*************************************************************************
@@ -251,17 +263,17 @@ if (GlobalUserData.rounds.length == 1) {
 * @global GlobalUserData: object containing the current user's data
 *************************************************************************/
 function editRound(roundId) {
-//Find current array index of this round
+  //Find current array index of this round
 
-for (GlobalRoundIndex = 0; GlobalRoundIndex < GlobalUserData.rounds.length; ++GlobalRoundIndex) {
-  if (GlobalUserData.rounds[GlobalRoundIndex].roundNum === roundId) {
-    break;
+  for (GlobalRoundIndex = 0; GlobalRoundIndex < GlobalUserData.rounds.length; ++GlobalRoundIndex) {
+    if (GlobalUserData.rounds[GlobalRoundIndex].roundNum === roundId) {
+      break;
+    }
   }
-}
-//Populate form with round data to be edited.
-fillRoundForm(GlobalUserData.rounds[GlobalRoundIndex]);
-//Display dialog
-transitionToDialog(GlobalRoundsModeDialog,"SpeedScore: Edit Round",prepEditRoundForm);
+  //Populate form with round data to be edited.
+  fillRoundForm(GlobalUserData.rounds[GlobalRoundIndex]);
+  //Display dialog
+  transitionToDialog(GlobalRoundsModeDialog, "SpeedScore: Edit Round", prepEditRoundForm);
 }
 
 /*************************************************************************
@@ -286,32 +298,32 @@ transitionToDialog(GlobalRoundsModeDialog,"SpeedScore: Edit Round",prepEditRound
 * @global GlobalRoundUpdatedMsg: The message field of the round updated toast
 *************************************************************************/
 function logRound() {
-//Create new object with form data
-const newRound = {
-  date: GlobalRoundDate.value,
-  course: GlobalRoundCourse.value,
-  type: GlobalRoundType.value,
-  holes: GlobalRoundHoles.value,
-  strokes: GlobalRoundStrokes.value,
-  minutes: GlobalRoundMinutes.value,
-  seconds: GlobalRoundSeconds.value,
-  SGS: GlobalRoundSGS.value,
-  notes: GlobalRoundNotes.value,
-  roundNum: ++(GlobalUserData.roundCount)
-};
-//Push round object to end of rounds array
-GlobalUserData.rounds.push(newRound);
-//Save to local storage
-localStorage.setItem(GlobalUserData.accountInfo.email,
-  JSON.stringify(GlobalUserData));
-//Reset form to prepare for next visit
-resetLogRoundForm();
-//Add new round to table
-addRoundToTable(GlobalUserData.rounds.length-1)
-//Transition back to mode page
-GlobalRoundUpdatedMsg.textContent = "New Round Logged!";
-GlobalRoundUpdated.classList.remove("hidden");
-transitionFromDialog(GlobalRoundsModeDialog);
+  //Create new object with form data
+  const newRound = {
+    date: GlobalRoundDate.value,
+    course: GlobalRoundCourse.value,
+    type: GlobalRoundType.value,
+    holes: GlobalRoundHoles.value,
+    strokes: GlobalRoundStrokes.value,
+    minutes: GlobalRoundMinutes.value,
+    seconds: GlobalRoundSeconds.value,
+    SGS: GlobalRoundSGS.value,
+    notes: GlobalRoundNotes.value,
+    roundNum: ++(GlobalUserData.roundCount)
+  };
+  //Push round object to end of rounds array
+  GlobalUserData.rounds.push(newRound);
+  //Save to local storage
+  localStorage.setItem(GlobalUserData.accountInfo.email,
+    JSON.stringify(GlobalUserData));
+  //Reset form to prepare for next visit
+  resetLogRoundForm();
+  //Add new round to table
+  addRoundToTable(GlobalUserData.rounds.length - 1)
+  //Transition back to mode page
+  GlobalRoundUpdatedMsg.textContent = "New Round Logged!";
+  GlobalRoundUpdated.classList.remove("hidden");
+  transitionFromDialog(GlobalRoundsModeDialog);
 }
 
 /*************************************************************************
@@ -337,27 +349,27 @@ transitionFromDialog(GlobalRoundsModeDialog);
 * @global GlobalRoundUpdatedMsg: The message field of the round updated toast
 *************************************************************************/
 function updateRound() {
-//Update existing round, which is located at userData.rounds[GlobalRoundIndex]
-GlobalUserData.rounds[GlobalRoundIndex].date = GlobalRoundDate.value;
-GlobalUserData.rounds[GlobalRoundIndex].course = GlobalRoundCourse.value;
-GlobalUserData.rounds[GlobalRoundIndex].type = GlobalRoundType.value;
-GlobalUserData.rounds[GlobalRoundIndex].holes = GlobalRoundHoles.value;
-GlobalUserData.rounds[GlobalRoundIndex].strokes = GlobalRoundStrokes.value;
-GlobalUserData.rounds[GlobalRoundIndex].minutes = GlobalRoundMinutes.value;
-GlobalUserData.rounds[GlobalRoundIndex].seconds = GlobalRoundSeconds.value;
-GlobalUserData.rounds[GlobalRoundIndex].SGS = GlobalRoundSGS.value;
-GlobalUserData.rounds[GlobalRoundIndex].notes = GlobalRoundNotes.value;
-//Write to local storage
-localStorage.setItem(GlobalUserData.accountInfo.email,
-  JSON.stringify(GlobalUserData));
-//Reset form to prepare for next visit
-resetLogRoundForm();
-//Add new round to table
-updateRoundInTable(GlobalRoundIndex);
-//Transition back to mode page
-roundUpdatedMsg.textContent = "Round Updated!";
-roundUpdated.classList.remove("hidden");
-transitionFromDialog(GlobalRoundsModeDialog);
+  //Update existing round, which is located at userData.rounds[GlobalRoundIndex]
+  GlobalUserData.rounds[GlobalRoundIndex].date = GlobalRoundDate.value;
+  GlobalUserData.rounds[GlobalRoundIndex].course = GlobalRoundCourse.value;
+  GlobalUserData.rounds[GlobalRoundIndex].type = GlobalRoundType.value;
+  GlobalUserData.rounds[GlobalRoundIndex].holes = GlobalRoundHoles.value;
+  GlobalUserData.rounds[GlobalRoundIndex].strokes = GlobalRoundStrokes.value;
+  GlobalUserData.rounds[GlobalRoundIndex].minutes = GlobalRoundMinutes.value;
+  GlobalUserData.rounds[GlobalRoundIndex].seconds = GlobalRoundSeconds.value;
+  GlobalUserData.rounds[GlobalRoundIndex].SGS = GlobalRoundSGS.value;
+  GlobalUserData.rounds[GlobalRoundIndex].notes = GlobalRoundNotes.value;
+  //Write to local storage
+  localStorage.setItem(GlobalUserData.accountInfo.email,
+    JSON.stringify(GlobalUserData));
+  //Reset form to prepare for next visit
+  resetLogRoundForm();
+  //Add new round to table
+  updateRoundInTable(GlobalRoundIndex);
+  //Transition back to mode page
+  roundUpdatedMsg.textContent = "Round Updated!";
+  roundUpdated.classList.remove("hidden");
+  transitionFromDialog(GlobalRoundsModeDialog);
 }
 
 /*************************************************************************
@@ -376,86 +388,86 @@ transitionFromDialog(GlobalRoundsModeDialog);
 * @global GlobalRoundSeconds: the number of seconds taken in teh round
 * @global GlobalRoundNotes: the notes on the round
 *************************************************************************/
-GlobalLogRoundForm.addEventListener("submit",function(e) {
-e.preventDefault(); //Prevent default submit behavior
-//Is the date valid?
-let dateValid = !GlobalRoundDate.validity.valueMissing;
-//Is the course field valid?
-let courseValid = !GlobalRoundCourse.validity.tooLong && 
-                  !GlobalRoundCourse.validity.valueMissing;
-//Is the password field valid?
-let strokesValid = !GlobalRoundStrokes.validity.typeMismatch &&
-                   !GlobalRoundStrokes.validity.rangeUnderflow &&
-                   !GlobalRoundStrokes.validity.rangeOverflow && 
-                   !GlobalRoundStrokes.validity.valueMissing;
-//Is the minutes field valid?
-let minutesValid = !GlobalRoundMinutes.validity.typeMismatch &&
-                   !GlobalRoundMinutes.validity.rangeUnderflow &&
-                   !GlobalRoundMinutes.validity.rangeOverflow && 
-                   !GlobalRoundMinutes.validity.valueMissing;
-//Is the seconds field valid?
-let secondsValid = !GlobalRoundSeconds.validity.typeMismatch &&
-                   !GlobalRoundSeconds.validity.rangeUnderflow &&
-                   !GlobalRoundSeconds.validity.rangeOverflow && 
-                   !GlobalRoundSeconds.validity.valueMissing;
-//Is the notes field valid?
-let notesValid = !GlobalRoundNotes.validity.tooLong;
-if (courseValid && strokesValid && minutesValid &&
-    secondsValid && notesValid &&dateValid) { 
+GlobalLogRoundForm.addEventListener("submit", function (e) {
+  e.preventDefault(); //Prevent default submit behavior
+  //Is the date valid?
+  let dateValid = !GlobalRoundDate.validity.valueMissing;
+  //Is the course field valid?
+  let courseValid = !GlobalRoundCourse.validity.tooLong &&
+    !GlobalRoundCourse.validity.valueMissing;
+  //Is the password field valid?
+  let strokesValid = !GlobalRoundStrokes.validity.typeMismatch &&
+    !GlobalRoundStrokes.validity.rangeUnderflow &&
+    !GlobalRoundStrokes.validity.rangeOverflow &&
+    !GlobalRoundStrokes.validity.valueMissing;
+  //Is the minutes field valid?
+  let minutesValid = !GlobalRoundMinutes.validity.typeMismatch &&
+    !GlobalRoundMinutes.validity.rangeUnderflow &&
+    !GlobalRoundMinutes.validity.rangeOverflow &&
+    !GlobalRoundMinutes.validity.valueMissing;
+  //Is the seconds field valid?
+  let secondsValid = !GlobalRoundSeconds.validity.typeMismatch &&
+    !GlobalRoundSeconds.validity.rangeUnderflow &&
+    !GlobalRoundSeconds.validity.rangeOverflow &&
+    !GlobalRoundSeconds.validity.valueMissing;
+  //Is the notes field valid?
+  let notesValid = !GlobalRoundNotes.validity.tooLong;
+  if (courseValid && strokesValid && minutesValid &&
+    secondsValid && notesValid && dateValid) {
     //All is well -- log round or update round
     if (GlobalRoundFormSubmitBtnIcon.classList.contains("fa-save")) {
       logRound();
     } else {
       updateRound();
     }
-   return;
-}
-//If here, at least one field is invalid: Display the errors
-//and allow user to fix them.
-GlobalRoundErrBox.classList.remove("hidden");
-document.title = "Error: Log Round";
-if (!notesValid) { 
-  GlobalRound.classList.remove("hidden");
-  GlobalRoundNotesErr.focus();
-  GlobalFirstFocusableLogRoundItem.set(GlobalRoundNotesErr);
-} else {
-  GlobalRoundNotesErr.classList.add("hidden");
-}
-if (!secondsValid) { 
-  GlobalRoundSecondsErr.classList.remove("hidden");
-  GlobalRoundSecondsErr.focus();
-  GlobalFirstFocusableLogRoundItem.set(GlobalRoundSecondsErr);
-} else {
-  GlobalRoundSecondsErr.classList.add("hidden");
-}
-if (!minutesValid) { 
-  GlobalRoundMinutesErr.classList.remove("hidden");
-  GlobalRoundMinutesErr.focus();
-  GlobalFrstFocusableLogRoundItem.set(GlobalRoundMinutesErr);
-} else {
-  GlobalRoundMinutesErr.classList.add("hidden");
-}
-if (!strokesValid) { 
-  GlobalRoundStrokesErr.classList.remove("hidden");
-  GlobalRoundStrokesErr.focus();
-  GlobalFirstFocusableLogRoundItem.set(GlobalRoundStrokesErr);
-} else {
-  GlobalRoundStrokesErr.classList.add("hidden");
-}
-if (!courseValid) { 
+    return;
+  }
+  //If here, at least one field is invalid: Display the errors
+  //and allow user to fix them.
+  GlobalRoundErrBox.classList.remove("hidden");
+  document.title = "Error: Log Round";
+  if (!notesValid) {
+    GlobalRound.classList.remove("hidden");
+    GlobalRoundNotesErr.focus();
+    GlobalFirstFocusableLogRoundItem.set(GlobalRoundNotesErr);
+  } else {
+    GlobalRoundNotesErr.classList.add("hidden");
+  }
+  if (!secondsValid) {
+    GlobalRoundSecondsErr.classList.remove("hidden");
+    GlobalRoundSecondsErr.focus();
+    GlobalFirstFocusableLogRoundItem.set(GlobalRoundSecondsErr);
+  } else {
+    GlobalRoundSecondsErr.classList.add("hidden");
+  }
+  if (!minutesValid) {
+    GlobalRoundMinutesErr.classList.remove("hidden");
+    GlobalRoundMinutesErr.focus();
+    GlobalFrstFocusableLogRoundItem.set(GlobalRoundMinutesErr);
+  } else {
+    GlobalRoundMinutesErr.classList.add("hidden");
+  }
+  if (!strokesValid) {
+    GlobalRoundStrokesErr.classList.remove("hidden");
+    GlobalRoundStrokesErr.focus();
+    GlobalFirstFocusableLogRoundItem.set(GlobalRoundStrokesErr);
+  } else {
+    GlobalRoundStrokesErr.classList.add("hidden");
+  }
+  if (!courseValid) {
     GlobalRoundCourseErr.classList.remove("hidden");
     GlobalRoundCourseErr.focus();
     GlobalFirstFocusableLogRoundItem.set(GlobalRoundCourseErr);
-} else {
+  } else {
     GlobalRoundCourseErr.classList.add("hidden");
-}
-if (!dateValid) { 
-  GlobalRoundDateErr.classList.remove("hidden");
-  GlobalRoundDateErr.focus();
-  GlobalFirstFocusableLogRoundItem.set(GlobalRoundDateErr);
-} else {
-  GlobalRoundDateErr.classList.add("hidden");
-}
+  }
+  if (!dateValid) {
+    GlobalRoundDateErr.classList.remove("hidden");
+    GlobalRoundDateErr.focus();
+    GlobalFirstFocusableLogRoundItem.set(GlobalRoundDateErr);
+  } else {
+    GlobalRoundDateErr.classList.add("hidden");
+  }
 });
 
 /*************************************************************************
@@ -471,22 +483,22 @@ if (!dateValid) {
 *         item in "Log Round" dialog)
 *************************************************************************/
 function keyDownRoundDialogFocused(e) {
-if (e.code === "Escape") {
-  GlobalRoundsModeLogCancelBtn.click();
-  return;
-}
-if (e.code === "Tab" && document.activeElement == GlobalFirstFocusableLogRoundItem.get() &&
-   e.shiftKey) {
+  if (e.code === "Escape") {
+    GlobalRoundsModeLogCancelBtn.click();
+    return;
+  }
+  if (e.code === "Tab" && document.activeElement == GlobalFirstFocusableLogRoundItem.get() &&
+    e.shiftKey) {
     //shift focus to last focusable item in dialog
     GlobalRoundsModeLogCancelBtn.focus();
     e.preventDefault();
     return;
-}
-if (e.code === "Tab" && document.activeElement == GlobalRoundsModeLogCancelBtn &&
+  }
+  if (e.code === "Tab" && document.activeElement == GlobalRoundsModeLogCancelBtn &&
     !e.shiftKey) {
     //shift focus to first focusable item in dialog
     GlobalFirstFocusableLogRoundItem.get().focus();
     e.preventDefault();
     return;
-}
+  }
 }
