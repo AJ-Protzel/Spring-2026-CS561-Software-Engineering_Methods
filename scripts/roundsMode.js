@@ -228,7 +228,6 @@ function deleteRound(roundId) {
     return round.roundNum !== roundId;
   });
 }
-
 /*************************************************************************
 * @function populateRoundsTable 
 * @desc 
