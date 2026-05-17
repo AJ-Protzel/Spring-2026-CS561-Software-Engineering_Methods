@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modal Popup</title>
+    <style>
+        .modal {display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; border: 1px solid #ccc;}
+        .modal.active {display: block;}
+    </style>
+</head>
+<body>
+    <button id="openModalButton">Open Modal</button>
+    <div id="myModal" class="modal">
+        <p>This is a modal popup.</p>
+        <button id="closeModalButton">Close</button>
+    </div>
+
+    <script>
+        document.getElementById('openModalButton').addEventListener('click', function() {
+            document.getElementById('myModal').classList.add('active');
+        });
+
+        document.getElementById('closeModalButton').addEventListener('click', function() {
+            document.getElementById('myModal').classList.remove('active');
+        });
+    </script>
+</body>
+</html>
